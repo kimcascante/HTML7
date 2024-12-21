@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #007bff;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.profile {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile .user-info {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.profile .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-details h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.news-feed {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-feed .post {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-feed .post:last-child {
+    border-bottom: none;
+}
+
+.news-feed .post h3 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.news-feed .post p {
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+
+.news-feed .post img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 0.5em;
+}
+
+
+/* Móviles */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    main {
+        padding: 1em;
+    }
+    .profile .user-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .news-feed .post h3 {
+        font-size: 1.1em;
+    }
+}
+
+/* Tablets  */
+@media (min-width: 601px) and (max-width: 900px) {
+    nav ul {
+        justify-content: space-around;
+    }
+    main {
+        padding: 1.5em;
+    }
+    .profile .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+    .news-feed .post h3 {
+        font-size: 1.2em;
+    }
+}
+
+/* Desktop  */
+@media (min-width: 901px) {
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .profile, .news-feed {
+        flex: 1;
+        margin: 0 1em;
+    }
+    .profile .user-info {
+        flex-direction: row;
+        align-items: center;
+    }
+    .profile .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    .news-feed .post h3 {
+        font-size: 1.4em;
+    }
+}
